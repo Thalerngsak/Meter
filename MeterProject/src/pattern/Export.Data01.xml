@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export id="Data01" name="ข้อมูลสถานะอ่านมาตร" type="Fix" delimiter=";" xmlns="http://export.tsc.co.th">
+	<PreUpdate>
+		<Table>
+			<Query />
+		</Table>
+	</PreUpdate>
+	<DirecotryName>
+		<FileNameConfiguration dir="\home\jbspro\domains\jbsprosmart.com\public_html\meter\output"><!-- Web01_20070912135060_D -->
+			<element type="constant">Web01_</element>
+			<element type="SystemTimestamp">yyyyMMdd-HHmmss</element>
+			<element type="constant">-</element>
+		</FileNameConfiguration>
+	</DirecotryName>
+	
+	<Body>
+		<Query/>
+
+		<Column Type="string" width="7">BR</Column>
+		<Column Type="string" width="2">CHKDIGIT</Column>
+		<Column Type="string" width="7">CUSTCODE</Column>
+		<Column Type="string" width="6">RTE</Column>
+		<Column Type="string" width="3">SEQ</Column>
+		<Column Type="string" width="30">ADDR</Column>
+		<Column Type="string" width="3">USETYPE</Column>
+		<Column Type="string" width="2">MTRMKCODE</Column>
+		<Column Type="string" width="2">METERSIZE</Column>
+		<Column Type="string" width="10">METERNO</Column>
+		<Column Type="number" width="11" pattern="#.00">SRVFEE</Column>
+		<Column Type="number" width="11" pattern="#.00">NORTRFWT</Column>
+		<Column Type="number" width="11" pattern="#.00">BILLAMT</Column>
+		<Column Type="number" width="11" pattern="#.00">VAT</Column>
+		<Column Type="number" width="11" pattern="#.00">TOTTRFWT</Column>
+		<Column Type="number" width="11" pattern="#.00">DISCNTAMT</Column>
+		<Column Type="number" width="11" pattern="#.00">ALLTOTPRICE</Column>
+		<Column Type="string" width="2">PRSMTRRDDTY</Column>
+		<Column Type="string" width="2">PRSMTRRDDTM</Column>
+		<Column Type="string" width="2">PRSMTRRDDTD</Column>
+		<Column Type="number" width="8">PRSMTRCNT</Column>
+		<Column Type="number" width="8">NEWCONS</Column>
+		<Column Type="string" width="2">COMMENT</Column>
+		<Column Type="string" width="20">COMMENTDEC</Column>
+		<Column Type="string" width="5">TIME</Column>
+		<Column Type="string" width="1">READFLAG</Column>
+		<Column Type="string" width="50">MLOCATION</Column>
+		<Column Type="string" width="1">MINCHARGE</Column>
+		<Column Type="string" width="1">BILLFLAG</Column>
+		<Column Type="string" width="1">BILLSEND</Column>
+		<Column Type="string" width="1">MTRSTAT</Column>
+		<Column Type="string" width="1">NEWREAD</Column>
+		<Column Type="string" width="4">CODEID</Column>
+		<Column Type="number" width="8">NOTIMES</Column>
+		<Column Type="number" width="8">UNITDIS</Column>
+		<Column Type="string" width="1">HLN</Column>
+		<Column Type="string" width="1">OKREAD</Column>
+		<Column Type="string" width="10">INVOICENO</Column>
+		<Column Type="string" width="10">LATITUDE</Column>
+		<Column Type="string" width="10">LONGITUDE</Column>
+		<Column Type="number" width="8">LSTMTRCNT</Column>
+		<Column Type="number" width="8">AVGWTUSG</Column>
+		<Column Type="string" width="3">OLDTYPE</Column>
+		<Column Type="string" width="25">CUSTNAME</Column>
+		<Column Type="string" width="1">INVFLAG</Column>
+		<Column Type="datetime" width="8" pattern="dd;MM;yy">LSTMTRRDDT</Column>
+		<Column Type="string" width="6">DOCDATE</Column>
+		<Column Type="number" width="6">NOPRINT</Column>
+		<Column Type="number" width="6">NOCLEAR</Column>
+		<Column Type="string" width="5">ALLSUBUSG</Column>
+	</Body>
+
+	<PostUpdate>
+		<Table>
+			<Query>select * from detail</Query>
+		</Table>
+	</PostUpdate>
+</Export>

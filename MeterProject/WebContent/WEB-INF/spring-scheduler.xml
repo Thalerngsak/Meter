@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" default-lazy-init="true">
+	
+	<!--  
+   
+	<bean id="runMeTask" class="com.importpwa.common.RunMeTask" />
+    <bean id="runMeTaskAssign" class="com.assign.common.RunMeTask" />
+    <bean id="runMeTaskRTE" class="com.rte.common.RunMeTask" />
+    
+    <bean id="runMeJob"  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject" ref="runMeTask" />
+	     <property name="targetMethod" value="execute" />
+    </bean>
+    <bean id="runMeJobAssign"  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject" ref="runMeTaskAssign" />
+	     <property name="targetMethod" value="execute" />
+    </bean>
+    <bean id="runMeJobRTE"  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject" ref="runMeTaskRTE" />
+	     <property name="targetMethod" value="execute" />
+    </bean>
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<property name="jobDetail" ref="runMeJob" />
+		<property name="cronExpression" value="0 0/5 * * * ?" />
+
+	</bean>
+	<bean id="cronTriggerAssign" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<property name="jobDetail" ref="runMeJobAssign" />
+		<property name="cronExpression" value="0 0 6 * * ?" />
+
+	</bean>
+	<bean id="cronTriggerRTE" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<property name="jobDetail" ref="runMeJobRTE" />
+		<property name="cronExpression" value="0 0 8 * * ?" />
+
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+				<ref bean="cronTriggerAssign" />
+				<ref bean="cronTriggerRTE" />
+			</list>
+		</property>
+	</bean>
+	-->
+</beans>

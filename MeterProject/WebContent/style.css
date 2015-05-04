@@ -1,0 +1,175 @@
+@charset "iso-8859-1";
+
+/* CSS Document */
+body {
+	font-family: Tahoma;
+	font-size: 18px;
+}
+/*header title*/
+table.headerTitle{
+
+  border-collapse: 0;
+  border-spacing: 0;
+  background-position: 100%;
+  background-image: url(images/General08.jpg)
+}
+
+.logout{
+  text-decoration: none
+}
+
+/*invoice*/
+table.invTitle {
+	font-size: 18px;
+	color: DarkBlue;
+	font-weight: bold;
+
+}
+table.invSub {
+	font-size: 18px;
+	color: DarkBlue;
+	font-weight: bold;
+	border-collapse:collapse;
+	border-color:#333333;
+
+}
+
+.invVal {
+	font-size: 14px;
+    color: Black;
+	font-weight: bold;
+
+}
+
+.invNotice {
+	font-size: 14px;
+    color: red;
+	font-weight: bold;
+
+}
+
+/* report */
+table.reportmain {
+	background-color: Silver
+}
+
+tr.reporthead {
+	font-size: 12px;
+	font-weight: bold;
+	background-color: Khaki;
+}
+
+table.reportdetail {
+	font-size: 18px;
+	font-weight: bold;
+	border-collapse:collapse;		
+}
+
+tr.reportdetail {
+	font-size: 12px;
+	font-weight: normal;
+   background-color: MintCream      
+
+}
+
+td.readflag {
+	font-size: 12px;
+	background-color: LightGreen;
+}
+/*navigator*/
+tr.navBar {
+	font-size: 12px;
+	font-weight: normal;
+
+}
+.navTextbox{
+	
+}
+.navDisTextbox {
+	font: normal 8px Tahoma;
+	text-align: center;
+	background-color: #C0C0C0;
+}
+
+/*common*/
+.textbox {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+}
+
+.disTextbox {
+	font-family: "MS Sans Serif";
+	font-size: 12px;
+	border: 0px;
+	background-color: transparent;
+}
+
+.browse {
+	font: normal 14px Tahoma;
+	width: 235px;
+}
+
+img.calendar {
+	vertical-align: text-top;
+	width: 16px;
+	height: 16px;
+	background-image: url("calendar/icon-appt.gif");
+}
+
+select {
+	font: normal 14px Tahoma;
+	width: 150px;
+}
+
+input {
+	font: normal 14px Tahoma;
+}
+
+input.submit {
+	width: 65px;
+}
+
+input.date {
+	font: normal 14px Tahoma;
+	text-align: center;
+	background-color: #C0C0C0;
+	width: 150px;
+}
+
+input.browsecomplete {
+	font: normal 14px Tahoma;
+	text-align: center;
+	background-color: #C0C0C0;
+	width: 235px;
+}
+
+/*message*/
+.errormsg {
+	color: #FF0000;
+	background-image: url(images/error18px.gif);
+	background-repeat: no-repeat;
+	padding-left: 25;
+	padding-top: 1;
+	padding-bottom: 1;
+	font-size: 14px;
+}
+
+.infomsg {
+	color: #0000FF;
+	background-image: url(images/info18px.gif);
+	background-repeat: no-repeat;
+	padding-left: 25;
+	padding-top: 1;
+	padding-bottom: 1;
+	font-size: 14px;
+}
+
+.warningmsg {
+	color: #FF0000;
+	background-image: url(images/warning18px.gif);
+	background-repeat: no-repeat;
+	padding-left: 25;
+	padding-top: 1;
+	padding-bottom: 1;
+	font-size: 14px;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Import id="imp-atm_location" tableId="atm_location" xmlns="http://import.tsc.co.th"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	fileNamePrefix="TSC_SET"
+	preProcess="com.pwa.interfaces.PostProcess"
+	postProcess="com.pwa.interfaces.PostProcess" genRecid="N">
+    <Item column="id" dataType="pk"  />
+	<Item column="atmid" dataType="ShortName" size="4" start="1" />
+	<Item column="branchcode" dataType="ShortName" size="1" start="5" />
+	<Item column="postcode" dataType="ShortName" size="3" start="6" />
+</Import>

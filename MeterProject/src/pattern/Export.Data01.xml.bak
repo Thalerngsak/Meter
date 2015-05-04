@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export id="Data01" name="ข้อมูลสถานะอ่านมาตร" type="Fix" delimiter=";" xmlns="http://export.tsc.co.th">
+	<PreUpdate>
+		<Table>
+			<Query />
+		</Table>
+	</PreUpdate>
+	<DirecotryName>
+		<FileNameConfiguration dir="D:\workspace\meterProject\meterInterfaces\output"><!-- Web01_20070912135060_D -->
+			<element type="constant">Web01_</element>
+			<element type="SystemTimestamp">yyyyMMdd-HHmmss</element>
+			<element type="constant">-</element>
+		</FileNameConfiguration>
+	</DirecotryName>
+	
+	<Body>
+		<Query/>
+
+		<Column Type="string" width="7">BR</Column>
+		<Column Type="string" width="2">CHKDIGIT</Column>
+		<Column Type="string" width="7">CUSTCODE</Column>
+		<Column Type="string" width="6">RTE</Column>
+		<Column Type="string" width="3">SEQ</Column>
+		<Column Type="string" width="65">ADDR</Column>
+		<Column Type="string" width="3">USETYPE</Column>
+		<Column Type="string" width="2">MTRMKCODE</Column>
+		<Column Type="string" width="2">METERSIZE</Column>
+		<Column Type="string" width="10">METERNO</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">NORTRFWT</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">DISCNTAMT</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">SRVFEE</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">VAT</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">TOTTRFWT</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">BILLAMT</Column>
+		<Column Type="int" width="11"  align="zeroAtLeft">ALLTOPRICE</Column>
+
+		<Column Type="datetime" width="8" pattern="yy;MM;dd">PRSMTRRDDT</Column>
+
+
+		<Column Type="int" width="8" align="zeroAtLeft">PRSMTRCNT</Column>
+		<Column Type="int" width="8" align="zeroAtLeft">PRSWTUSG</Column>
+		<Column Type="string" width="2">COMMENT</Column>
+		<Column Type="string" width="20">COMMENTDEC</Column>
+		<Column Type="string" width="5">TIME</Column>
+		<Column Type="string" width="1">READFLAG</Column>
+		<Column Type="string" width="1">MLOCATION</Column>
+		<Column Type="string" width="1">MINCHARGE</Column>
+		<Column Type="string" width="1">BILLFLAG</Column>
+		<Column Type="string" width="1">BILLSEND</Column>
+		<Column Type="string" width="1">MTRSTAT</Column>
+		<Column Type="string" width="1">NEWREAD</Column>
+		<Column Type="string" width="4">CODEID</Column>
+		<Column Type="string" width="2">NOTIMES</Column>
+		<Column Type="int" width="8" align="zeroAtLeft">UNITDISCNT</Column>
+		<Column Type="string" width="1">HLN</Column>
+		<Column Type="string" width="1">OKREAD</Column>
+		<Column Type="string" width="10">INVOICECNT</Column>
+
+	</Body>
+
+	<PostUpdate>
+		<Table>
+			<Query>select * from detail</Query>
+		</Table>
+	</PostUpdate>
+</Export>

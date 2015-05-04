@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="loginForm" type="com.pwa.web.struts.form.LoginForm" />
+		<form-bean name="homeForm" type="com.pwa.web.struts.form.HomeForm" />
+		<form-bean name="assignForm" type="com.pwa.web.struts.form.AssignForm" />
+		<form-bean name="importPlanForm" type="com.pwa.web.struts.form.ImportPlanForm" />
+		<form-bean name="checkPlanForm" type="com.pwa.web.struts.form.CheckPlanForm" />
+		<form-bean name="exportDataForm" type="com.pwa.web.struts.form.ExportDataForm" />
+		<form-bean name="importDataForm" type="com.pwa.web.struts.form.ImportDataForm" />
+		<form-bean name="reportNormalForm" type="com.pwa.web.struts.form.ReportNormalForm" />
+		<form-bean name="reportSummaryForm" type="com.pwa.web.struts.form.ReportSummaryForm" />
+		<form-bean name="importMasterDataForm" type="com.pwa.web.struts.form.ImportMasterDataForm" />
+		<form-bean name="configForm" type="com.pwa.web.struts.form.ConfigForm" />
+		<form-bean name="reportAbNormalForm" type="com.pwa.web.struts.form.ReportAbNormalForm" />
+		<form-bean name="userInquiryForm" type="com.pwa.web.struts.form.UserInquiryForm" />
+        <form-bean name="meterCardForm" type="com.pwa.web.struts.form.MeterCardForm" />
+        <form-bean name="uploadFileForm" type="com.pwa.web.struts.form.UploadFileForm" />
+        <form-bean name="editRTECTRLForm" type="com.pwa.web.struts.form.EditRTECTRLForm" />
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards>
+		<forward name="login" path="/login.jsp" />
+
+	</global-forwards>
+
+	<action-mappings>
+		<action attribute="loginForm" input="/login.jsp" name="loginForm" parameter="act" path="/login" scope="request" type="com.pwa.web.struts.action.LoginAction">
+			<forward name="success" path="/index.jsp" />
+			<forward name="main" path="/login.jsp" />
+		</action>
+		<action attribute="homeForm" input="/home.jsp" name="homeForm" parameter="act" path="/home" scope="request" type="com.pwa.web.struts.action.HomeAction">
+			<forward name="success" path="/login.jsp" />
+			<forward name="main" path="/home.jsp" />
+		</action>
+		<action attribute="assignForm" input="/assign.jsp" name="assignForm" parameter="act" path="/assign" scope="request"
+			type="com.pwa.web.struts.action.AssignAction">
+			<forward name="success" path="/assign.jsp" />
+			<forward name="main" path="/assign.jsp" />
+		</action>
+		<action attribute="importPlanForm" input="/importPlan.jsp" name="importPlanForm" parameter="act" path="/importplan" scope="request"
+			type="com.pwa.web.struts.action.ImportPlanAction">
+			<forward name="success" path="/importPlan.jsp" />
+			<forward name="main" path="/importPlan.jsp" />
+		</action>
+		<action attribute="checkPlanForm" input="/checkPlan.jsp" name="checkPlanForm" parameter="act" path="/checkplan" scope="request"
+			type="com.pwa.web.struts.action.CheckPlanAction">
+			<forward name="success" path="/checkPlan.jsp" />
+			<forward name="main" path="/checkPlan.jsp" />
+		</action>
+		<action attribute="exportDataForm" input="/exportData.jsp" name="exportDataForm" parameter="act" path="/exportData" scope="request"
+			type="com.pwa.web.struts.action.ExportDataAction">
+			<forward name="success" path="/exportView.jsp" />
+			<forward name="main" path="/exportData.jsp" />
+		</action>
+		<action path="/fileDownload" scope="request" type="com.pwa.web.struts.action.FileDownloadAction" validate="false" />
+		<action path="/fileDownloadExport" scope="request" type="com.pwa.web.struts.action.FileDownloadExportAction" validate="false" />
+		<action attribute="importDataForm" input="/importData.jsp" name="importDataForm" parameter="act" path="/importData" scope="request"
+			type="com.pwa.web.struts.action.ImportDataAction" validate="false">
+			<forward name="success" path="/importData.jsp" />
+			<forward name="main" path="/importData.jsp" />
+		</action>
+		<action attribute="reportNormalForm" input="/reportNormalSearch.jsp" name="reportNormalForm" parameter="act" path="/reportNormal" scope="request"
+			type="com.pwa.web.struts.action.ReportNormalAction">
+			<forward name="success" path="/reportNormalView.jsp" />
+			<forward name="main" path="/reportNormalSearch.jsp" />
+		</action>
+
+
+		<action path="/logout" scope="request" type="com.pwa.web.struts.action.LogoutAction" validate="false">
+			<forward name="success" path="/home.do?act=main" />
+		</action>
+		<action attribute="reportSummaryForm" input="/reportSummarySearch.jsp" name="reportSummaryForm" parameter="act" path="/reportSummary" scope="request"
+			type="com.pwa.web.struts.action.ReportSummaryAction">
+			<forward name="success" path="/reportSummaryView.jsp" />
+			<forward name="main" path="/reportSummarySearch.jsp" />
+		</action>
+		<action attribute="importMasterDataForm" input="/importMasterData.jsp" name="importMasterDataForm" parameter="act" path="/importMasterData"
+			scope="request" type="com.pwa.web.struts.action.ImportMasterDataAction" validate="false">
+			<forward name="success" path="/importMasterData.jsp" />
+			<forward name="main" path="/importMasterData.jsp" />
+		</action>
+		<action attribute="configForm" input="/config.jsp" name="configForm" parameter="act" path="/config" scope="request"
+			type="com.pwa.web.struts.action.ConfigAction" validate="false">
+			<forward name="success" path="/config.jsp" />
+			<forward name="main" path="/config.jsp" />
+		</action>
+		<action attribute="reportAbNormalForm" input="/reportAbNormalSearch.jsp" name="reportAbNormalForm" parameter="act" path="/reportAbNormal"
+			scope="request" type="com.pwa.web.struts.action.ReportAbNormalAction">
+			<forward name="success" path="/reportAbNormalView.jsp" />
+			<forward name="main" path="/reportAbNormalSearch.jsp" />
+		</action>
+		<action attribute="userInquiryForm" input="/userInquiry.jsp" name="userInquiryForm" parameter="act" path="/userInquiry" scope="request"
+			type="com.pwa.web.struts.action.UserInquiryAction" validate="false">
+			<forward name="main" path="/userInquiry.jsp" />
+			<forward name="success" path="/userInquiryView.jsp" />
+		</action>
+        <action attribute="meterCardForm" input="/meterCard.jsp" name="meterCardForm" parameter="act" path="/meterCard" scope="request"
+            type="com.pwa.web.struts.action.MeterCardAction" validate="false">
+            <forward name="main" path="/meterCard.jsp" />
+            <forward name="success" path="/meterCardView.jsp" />
+        </action>
+        <action attribute="uploadFileForm" input="/uploadFile.jsp" name="uploadFileForm" parameter="act" path="/uploadfile" scope="request"
+            type="com.pwa.web.struts.action.UploadFileAction" validate="false">
+            <forward name="main" path="/uploadFile.jsp" />
+            <forward name="success" path="/uploadFile.jsp" />
+        </action>
+        <action attribute="editRTECTRLForm" input="/editRTECTRL.jsp" name="editRTECTRLForm" parameter="act" path="/editRTECTRL" scope="request"
+            type="com.pwa.web.struts.action.EditRTECTRLAction" validate="false">
+            <forward name="main" path="/editRTECTRL.jsp" />
+            <forward name="success" path="/editRTECTRL.jsp" />
+        </action>
+	</action-mappings>
+	
+	<controller maxFileSize="2G" />
+	<message-resources parameter="com.pwa.web.struts.ApplicationResources" />
+	
+	<!-- Spring Struts plugin 
+   <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+	<set-property property="contextConfigLocation"
+	value="/WEB-INF/spring-scheduler.xml" />
+    </plug-in>-->
+</struts-config>
+
